@@ -34,12 +34,13 @@ This is most common use case for Software projects to be started quickly
 In order to kick start this Project enable AWS credential by below 2 methods:
 1) How to export AWS Credential manually:
 
-    export TF_VAR_access_key="your_access_key_here in terminal" 
+    export TF_VAR_access_key="your_access_key_here in terminal";
+   
     export TF_VAR_secret_key="your_secret_key_here in terminal" 
 
        Then, declare global variable in variables.tf file as below
-        ## variable "secret_key" {}
-        ## variable "access_key" {}
+      ## variable "secret_key" {}
+      ## variable "access_key" {}
 
 3) AWS Credential inputs dynamic variable retival:
    Create terraform.tfvars file and keyin most common global variable for one time setup
