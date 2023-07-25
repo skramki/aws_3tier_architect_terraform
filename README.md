@@ -6,6 +6,7 @@ The three-tier architecture is the most popular implementation of a multi-tier a
 
 This is most common use case for Software projects to be started quickly
 
+![Alt text](https://github.com/skramki/aws_3tier_architect_terraform/blob/246acd458b7ac1c4617a96a787ec27f6df8c3976/AWS_3tier_Architecture.jpg)
 
 ### Resources need to be created / installed :
 
