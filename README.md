@@ -45,9 +45,9 @@ In order to kick start this Project enable AWS credential by below 2 methods:
 3) AWS Credential inputs dynamic variable retival:
    Create terraform.tfvars file and keyin most common global variable for one time setup
    
-      aws_region = "ap-southeast-1"
-      access_key = "your_access_key_here"
-      secret_key = "your_secret_key_here"
+      aws_region = "ap-southeast-1";
+      access_key = "your_access_key_here";
+      secret_key = "your_secret_key_here";
 
     Then, declare global variable in variables.tf file as below
     ## variable "secret_key" {}
