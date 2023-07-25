@@ -9,44 +9,51 @@ This is most common use case for Software projects to be started quickly
 
 1) Custom VPC 
 
-* 2 Subnets (Public)
+2) 2 Subnets (Public)
 
-* 1 Subnet (Private)
+3) 1 Subnet (Private)
 
-* 2 EC2 Instances
+4) 2 EC2 Instances
 
-* Security Group
+5) Security Group
 
-* Elastic IP
+6) Elastic IP
 
-* NAT Gateway
+7) NAT Gateway
 
-* Internet Gateway
+8) Internet Gateway
 
-* Route Table
+9) Route Table
 
-* Application Load Balancer
+10) Application Load Balancer
 
-* Apache Webserver
+11) Apache Webserver
 
-* MySQL DB
+12) MySQL DB
 
-## Create main.cf
-3-tier-app/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── frontend/
-│   ├── main.tf
-│   └── variables.tf
-├── backend/
-│   ├── main.tf
-│   └── variables.tf
-├── database/
-│   ├── main.tf
-│   └── variables.tf
-└── terraform.tfvars
+In order to kick start this Project enable AWS credential by below 2 methods:
+1) How to export AWS Credential manually:
 
-##export TF_VAR_secret_key="your_secret_key_here"
-##variable "secret_key" {}
+export TF_VAR_access_key="your_access_key_here in terminal" 
+export TF_VAR_secret_key="your_secret_key_here in terminal" 
+    Then, declare global variable in variables.tf file as below
+    ## variable "secret_key" {}
+    ## variable "access_key" {}
 
+2) AWS Credential inputs dynamic variable retival:
+   Create terraform.tfvars file and keyin most common global variable for one time setup
+   
+  aws_region = "ap-southeast-1"
+  access_key = "your_access_key_here"
+  secret_key = "your_secret_key_here"
+
+    Then, declare global variable in variables.tf file as below
+    ## variable "secret_key" {}
+    ## variable "access_key" {}
+
+
+Next it's good to deploy AWS 3 tier Terraform code using below commands
+
+terraform init
+terraform plan
+terraform apply
