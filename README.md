@@ -2,6 +2,8 @@
 
 The three-tier architecture is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier.
 
+https://github.com/skramki/aws_3tier_architect_terraform/blob/610164fa68bcecd0e9f488e9f7a4e0e67c6eb7e4/AWS%203Tier%20Architecture.png
+
 This is most common use case for Software projects to be started quickly
 
 
