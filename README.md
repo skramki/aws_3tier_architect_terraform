@@ -4,7 +4,7 @@
 
 This is most common use case for Software projects to be started quickly
 
-![Alt text](https://github.com/skramki/aws_3tier_architect_terraform/blob/3a3f51128b59624cffa3e8ce6d9932eddcc35d54/3Tier%20AWS-EC2%20Architecture%20Provisioning-TF-.png)
+            ![Alt text](https://github.com/skramki/aws_3tier_architect_terraform/blob/3a3f51128b59624cffa3e8ce6d9932eddcc35d54/3Tier%20AWS-EC2%20Architecture%20Provisioning-TF-.png)
 
 ### Resources need to be created / installed:
 
@@ -14,23 +14,25 @@ This is most common use case for Software projects to be started quickly
 
 3) 1 Subnet (Private)
 
-4) 2 EC2 Instances
+4) Security Group
 
-5) Security Group
+5) Elastic IP
 
-6) Elastic IP
+6) NAT Gateway
 
-7) NAT Gateway
+7) Internet Gateway
 
-8) Internet Gateway
+8) Route Table
 
-9) Route Table
+9) 5 EC2 Instances
 
-10) Application Load Balancer
+10) Apache Webserver
 
-11) Apache Webserver
+11) Application Server
 
 12) MySQL DB
+
+13) Application Load Balancer
 
 In order to kick start this Project enable AWS credential by below 2 methods:
 1) How to export AWS Credential manually:
