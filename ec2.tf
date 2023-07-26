@@ -34,9 +34,9 @@ resource "aws_instance" "web" {
       host = self.public_ip
       user = "ec2-user"
       private_key = "${file("./ec2-mgt-key.pem")}"
-    } 
-} */
-
+      } 
+    } */
+}
 resource "aws_instance" "app" {
   ami           = "ami-0acb5e61d5d7b19c8"
   instance_type = "t2.micro"
