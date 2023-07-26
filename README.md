@@ -41,7 +41,7 @@ In order to kick start this Project enable AWS credential by below 2 methods:
    
     export TF_VAR_secret_key="your_secret_key_here in terminal" 
 
-       Then, declare global variable in variables.tf file as below
+      Then, declare global variable in variables.tf file as below
       ## variable "secret_key" {}
       ## variable "access_key" {}
 
