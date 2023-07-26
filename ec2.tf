@@ -22,7 +22,7 @@ resource "aws_instance" "web" {
       private_key = "${file("./ec2-mgt-key.pem")}"
     }  
   }
-
+/*
   provisioner "remote-exec" {
     inline = [
       "sudo yum install -y httpd",
@@ -35,7 +35,7 @@ resource "aws_instance" "web" {
       user = "ec2-user"
       private_key = "${file("./ec2-mgt-key.pem")}"
     } 
-}
+} */
 
 resource "aws_instance" "app" {
   ami           = "ami-0acb5e61d5d7b19c8"
