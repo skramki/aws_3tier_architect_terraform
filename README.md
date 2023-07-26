@@ -24,13 +24,13 @@ This is most common use case for Software projects to be started quickly
 
 8) Route Table
 
-9) 5 EC2 Instances
+9) 4 EC2 Instances
 
-10) Apache Webserver
+10) Apache Webserver (2 Public Gateway)
 
-11) Application Server
+11) Application Server ( 1 Private Gateway )
 
-12) MySQL DB
+12) MySQL DB ( 1 Private Gateway )
 
 13) Application Load Balancer
 
