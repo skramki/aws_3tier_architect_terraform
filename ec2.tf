@@ -22,6 +22,15 @@ resource "aws_instance" "web" {
       private_key = "${file("./ec2-mgt-key.pem")}"
     }  
   }
+
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo yum install -y httpd
+
+              sudo systemctl start httpd
+              sudo systemctl enable httpd
+              EOF
+}
 /*
   provisioner "remote-exec" {
     inline = [
@@ -29,9 +38,6 @@ resource "aws_instance" "web" {
       "sudo systemctl start httpd",
       "sudo systemctl enable httpd"
       ]
-    tags = {
-      Name = "WebServer"
-    }
   }
       connection {
       type = "ssh"
@@ -39,11 +45,8 @@ resource "aws_instance" "web" {
       user = "ec2-user"
       private_key = "${file("./ec2-mgt-key.pem")}"
 
-      tags = {
-        Name = "WebServer"
-      }
-   } */
-}
+      } */
+   
 resource "aws_instance" "app" {
   ami           = "ami-0acb5e61d5d7b19c8"
   instance_type = "t2.micro"
@@ -54,6 +57,13 @@ resource "aws_instance" "app" {
   tags = {
     Name = "AppServer"
   }
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo yum install -y httpd
+
+              sudo systemctl start httpd
+              sudo systemctl enable httpd
+              EOF
 }
 
 resource "aws_instance" "db" {
@@ -66,4 +76,11 @@ resource "aws_instance" "db" {
   tags = {
     Name = "DBServer"
   }
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo yum install -y mariadb-server
+
+              sudo systemctl start mariadb
+              sudo systemctl enable mariadb
+              EOF
 }
