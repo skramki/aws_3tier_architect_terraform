@@ -42,8 +42,8 @@ In order to kick start this Project enable AWS credential by below 2 methods:
     export TF_VAR_secret_key="your_secret_key_here in terminal" 
 
       Then, declare global variable in variables.tf file as below
-      ## variable "secret_key" {}
-      ## variable "access_key" {}
+      variable "secret_key" {}
+      variable "access_key" {}
 
 3) AWS Credential inputs dynamic variable retival:
    Create terraform.tfvars file and keyin most common global variable for one time setup
@@ -55,14 +55,14 @@ In order to kick start this Project enable AWS credential by below 2 methods:
       secret_key = "your_secret_key_here";
 
     Then, declare global variable in variables.tf file as below
-    ## variable "secret_key" {}
-    ## variable "access_key" {}
+    variable "secret_key" {}
+    variable "access_key" {}
 
 
 Next it's good to deploy AWS 3 tier Terraform code using below commands
 
-terraform init
+## terraform init
 
-terraform plan
+## terraform plan
 
-terraform apply
+## terraform apply
