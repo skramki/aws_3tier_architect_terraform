@@ -26,16 +26,23 @@ resource "aws_instance" "web" {
   provisioner "remote-exec" {
     inline = [
       "sudo yum install -y httpd",
-      "sudo systemctl start httpd"
+      "sudo systemctl start httpd",
       "sudo systemctl enable httpd"
-    ]
+      ]
+    tags = {
+      Name = "WebServer"
+    }
+  }
       connection {
       type = "ssh"
       host = self.public_ip
       user = "ec2-user"
       private_key = "${file("./ec2-mgt-key.pem")}"
-      } 
-    } */
+
+      tags = {
+        Name = "WebServer"
+      }
+   } */
 }
 resource "aws_instance" "app" {
   ami           = "ami-0acb5e61d5d7b19c8"
