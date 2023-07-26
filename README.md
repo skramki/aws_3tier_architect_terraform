@@ -1,6 +1,4 @@
-# AWS 3-Tier Architecture EC2 provisioning using Terraform
-
-The three-tier architecture is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier.
+# 3-Tier Architecture AWS EC2 provisioning using Terraform
 
 ![Alt text](https://github.com/skramki/aws_3tier_architect_terraform/blob/40ff6850aa4760b924c205ecccaa0efa850c780d/3Tier%20Architect%20Overview.png)
 
