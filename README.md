@@ -4,7 +4,7 @@
 
 This is most common use case for Software projects to be started quickly
 
-![Alt text](https://github.com/skramki/aws_3tier_architect_terraform/blob/246acd458b7ac1c4617a96a787ec27f6df8c3976/AWS_3tier_Architecture.jpg)
+![Alt text](https://github.com/skramki/aws_3tier_architect_terraform/blob/43b193bc7e52e5eac66a3befb206abdc0627c375/3Tier%20AWS-EC2%20Architecture%20Provisioning-TF.jpg)
 
 ### Resources need to be created / installed:
 
