@@ -78,7 +78,7 @@ resource "aws_instance" "db" {
   }
   user_data = <<-EOF
               #!/bin/bash
-              sudo yum install -y mariadb-server
+              sudo yum install -y mariadb105
 
               sudo systemctl start mariadb
               sudo systemctl enable mariadb
