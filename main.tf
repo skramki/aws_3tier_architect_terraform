@@ -1,4 +1,4 @@
-# Terraform version & Service Provider source code using Delarative Method
+# Terraform 5.0 version & AWS EC2 Provision source code using Delarative Method
 
 terraform {
  required_providers {
