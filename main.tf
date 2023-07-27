@@ -158,10 +158,32 @@ resource "aws_eip" "custom-eip" {
 
 # Step 8: Create NAT Gateway to allow Internet traffic for Public subnets
 
+/*
 resource "aws_nat_gateway" "custom-natgw" {
   allocation_id = aws_eip.custom-eip.id
   subnet_id     = aws_subnet.public[0].id
 
   tags = {
     Name = "NAT GW"
+  } */
+
+data "aws_nat_gateways" "custom-natgws" {
+  vpc_id = aws_vpc.customvpc.id
+
+  filter {
+    name   = "state"
+    values = ["available"]
   }
+  tags = {
+    Name = "NAT GW"
+  }
+}
+
+data "aws_nat_gateway" "custom-ngw" {
+  count = length(data.aws_nat_gateways.custom-natgws.ids)
+  id    = tolist(data.aws_nat_gateways.custom-natgws.ids)[count.index]
+
+  # To ensure proper ordering, it is recommended to add an explicit dependency
+  # on the Internet Gateway for the VPC.
+  depends_on = [aws_internet_gateways.custom-internet-gw]
+}
